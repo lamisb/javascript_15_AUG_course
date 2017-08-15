@@ -1,0 +1,4 @@
+- Elemente können eine ID haben.
+- Man kann Elemente in einer Variable speichern 'document.getElementById(id)'
+- Man kann events auf diesem Element ausführen 'click' variable.addEventListener("click", funktion);
+- Man den Text innerhalb eines Elements änder variable.innerHTML = 'text'
