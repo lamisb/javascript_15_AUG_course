@@ -105,6 +105,121 @@
           </a>
         </section>
 
+        <section>
+          <h5>Los gehts - Javascript ausführen</h5>
+
+            <section>
+              <p>
+                Alles innnerhalb des Script elements wird als JS-Code ausgeführt.
+              </p>
+              <pre>
+                <code data-trim data-noescape>
+                  &lt;script&gt;
+                    console.log('hallo welt');
+                  &lt;/script&gt;
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <p>
+                Die Entwickler-Konsole öffnen
+              </p>
+              <img src="images/open_console.gif" width="500" height="340" alt="">
+            </section>
+
+        </section>
+
+        <section>
+          <h5>Typen</h5>
+          <section>
+            Strings <br>
+            Alles innerhalb von 2 Anführungszeichen
+            <pre>
+              <code data-trim data-noescape>
+                'ein String'
+                "noch ein string mit Zahlen"
+              </code>
+            </pre>
+          </section>
+          <section>
+            Zahlen <br>
+            Es gibt Ganzzahlen - "Integer" genannt. Mit diesen kann man rechnen
+            <pre>
+              <code data-trim data-noescape>
+                1 + 3
+              </code>
+            </pre>
+            Es gibt Dezimalzahlen - "decimals" genannt. <br>
+            <strong>
+              Achtung!! Der Trenner ist ein "." und kein ","
+            </strong>
+            <pre>
+              <code data-trim data-noescape>
+                1.5 + 4.23546
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <h5>Variablen</h5>
+
+          <h6>Variablen speichern beliebige Informationen</h6>
+
+            <p>
+              Variablen werden mit dem befehlt 'var' eingeleitet und der Wert hinter dem '=' als Information gespeichert.
+            </p>
+            <pre>
+              <code data-trim data-noescape>
+                &lt;script&gt;
+                  var number = 1;
+                  number + number;
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+        </section>
+
+        <section>
+          <h5>Funktionen</h5>
+
+          <p>
+            Führen beliebigen Code aus und geben einen Wert zurück. <br>
+          </p>
+
+            <pre>
+              <code data-trim data-noescape>
+                &lt;script&gt;
+                  function() double(number) {
+                    return number + number;
+                  }
+
+                  double(2);
+                &lt;/script&gt;
+              </code>
+            </pre>
+
+        </section>
+
+
+        <section>
+          <h5>Einfache Beispiele</h5>
+
+          <section>
+            <h6>Text austauschen</h6>
+            <pre>
+              <code data-trim data-noescape>
+                &lt;script&gt;
+                  var button = document.getElementById('click-button');
+                  button.innerHTML = '<i>Bananarama</i>';
+                &lt;/script&gt;
+              </code>
+            </pre>
+          </section>
+
+        </section>
+
 			</div>
 		</div>
 
