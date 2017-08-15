@@ -1,14 +1,7 @@
 slides/src/node_modules
-.idea/
-*.iml
-*.iws
-*.eml
-out/
-.DS_Store
-.svn
-slides/src/log/*.log
-slides/src/tmp/**
-slides/src/.sass-cache
-slides/src/css/reveal.min.css
-slides/src/js/reveal.min.js
+
+
+
+
+
 

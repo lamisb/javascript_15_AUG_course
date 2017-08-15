@@ -1,3 +1,3 @@
 (function() {
-  console.log('styles in the body')
+  console.log('4: external script in the body')
 })()
