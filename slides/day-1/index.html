@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Kennenlernen</h1>
+
+					<p>
+						Who is who und was hat dich bewegt einen Javascript-Kurs zu belegen?
+					</p>
+					<p>
+						<img src="images/hello.gif" alt="">
+					</p>
+				</section>
+
+				<section>
+					Inhalt: <br>
+					<ul>
+						<li>Git - Datei-Versionierung</li>
+						<li>Was ist Javascript und wie benutze ich das auf meiner Webseite?</li>
+						<li>Erste Praxis - Events und Manipulation einzelner Elemente einer Webseite</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Git & Github</h2>
+          <ul>
+            <li>Es ist möglich lokal am Computer zu arbeiten und mit dem Server (Cloud) zu synchronisieren</li>
+            <li>Git ist ein Datei-Versionierungs-tool</li>
+            <li>Man kann gemeinsam an Code arbeiten</li>
+            <li>Man kann Änderungen hinzufügen und alte "Versionen" behalten</li>
+          </ul>
+				</section>
+        <section>
+          <h4>Basics</h4>
+          <ul>
+            <li>
+              <h6>Repositories</h6>
+              <small>Ein Software-Projekt</small>
+            </li>
+            <li>
+              <h6>Branches</h6>
+              <small>
+                Eine "Version" des Software-Projekts, wo sicher Änderungen gemacht werden können und später zu der "Hauptversion" zusammengeführt werden.
+              </small>
+            </li>
+            <li>
+              <h6>Commits</h6>
+              <small>
+                Eine lokale Änderung, welche man an den Server schickt, damit andere diese Änderung laden können.
+              </small>
+            </li>
+            <li>
+              <h6>Pull Request</h6>
+              <small>
+                Es wurde ein Branch (Version) mit Änderungen erstellt. Ein Pull Request ist eine offizielle Anfrage, dass diese Änderungen zur Hauptversion hinzugefügt werden sollen. Dadurch gibt es eine Barriere, um das Projekt vor destruktiven Änderungen zu schützen.
+              </small>
+            </li>
+          </ul>
+
+        </section>
+
+        <section>
+          <h5>Installation der Desktop-Software</h5>
+          <ul>
+            <li>
+                <a href="https://desktop.github.com/" target="_blank">https://desktop.github.com/</a>
+            </li>
+            <li>
+              <a href="https://git-for-windows.github.io/" target="_blank">https://git-for-windows.github.io/</a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h5>Was ist Javascript und wie benutze ich das auf meiner Webseite?</h5>
+          <p>
+            Download des Kurs-Projekts mit Git.
+          </p>
+          <a href="https://github.com/easyPEP/javascript_15_AUG_course" target="_blank">
+            https://github.com/easyPEP/javascript_15_AUG_course
+          </a>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				loop: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
+<!-- <pre>
+						<code data-trim data-noescape>
+					    window.location = 'test';
+						</code>
+					</pre>
+ -->
