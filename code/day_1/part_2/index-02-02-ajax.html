@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+  <div id="change-it">
+    <div style="display:none;" id="loading">LOADING....</div>
+    <div id="content">
+      <p>
+        <strong>Title:</strong>
+        <span id="title">...</span>
+      </p>
+      <p>
+        <strong>Image:</strong>
+        <span id="image">...</span>
+      </p>
+    </div>
+  </div>
+
+  <button id="load-it">LOAD-DATA</button>
+
+  <script type="text/javascript">
+    $("#load-it").on('click', function(){
+      // toggle state
+      $("#loading").show()
+      $("#content").hide()
+
+      var root = 'https://jsonplaceholder.typicode.com';
+      $.ajax({
+        url: root + '/photos/1',
+        method: 'GET'
+      }).then(function(data) {
+        $("#change-it #title").text(data.title)
+        var $image = $("<img />")
+        // https://www.w3schools.com/html/html_images.asp
+        $image.attr("src", data.thumbnailUrl)
+        $("#change-it #image").html($image)
+        // toggle state
+        $("#loading").hide()
+        $("#content").show()
+      });
+    })
+  </script>
+
+  </body>
+</html>

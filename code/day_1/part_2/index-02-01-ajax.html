@@ -8,12 +8,8 @@
 
   <div id="change-it">
     <p>
-      <strong>TITLE:</strong>
-      <span id="title"></span>
-    </p>
-    <p>
-      <strong>BODY:</strong>
-      <span id="title"></span>
+      <strong>Title:</strong>
+      <span id="title">...</span>
     </p>
   </div>
 
@@ -23,11 +19,9 @@
     $("#load-it").on('click', function(){
       var root = 'https://jsonplaceholder.typicode.com';
       $.ajax({
-        url: root + '/posts/1',
-        method: 'GET'
+        url: root + '/posts/1', method: 'GET'
       }).then(function(data) {
         $("#change-it #title").text(data.title)
-        $("#change-it #body").text(data.body)
       });
     })
   </script>

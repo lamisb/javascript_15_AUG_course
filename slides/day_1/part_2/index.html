@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section id="fragments">
+						<h2>PART 2</h2>
+						<p class="fragment">Plugins</p>
+						<p class="fragment">Ajax</p>
+						<p class="fragment">History</p>
+						<p class="fragment">Recap</p>
+					</section>
+				</section>
+
+
+				<section>
+					<h2>Plugin: JQUERY</h2>
+					<p>$</p>
+					<p>
+						<a href="https://jquery.com/">https://jquery.com/</a>
+					</p>
+					<p class="fragment">
+						Installation
+					</p>
+					<pre class="fragment">
+						<code contenteditable>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>index-jquery.html</pre>
+					</p>
+				</section>
+				<section>
+					<h2>Plugin: JQUERY</h2>
+					<p>
+						Aufgabe: Text-Replace
+					</p>
+					<pre>
+						<code class="hljs" data-trim contenteditable>
+<h1 id="hello-world">HELLO WORLD</h1>
+						</code>
+					</pre>
+					<p class="fragment">
+						Lösung
+					</p>
+					<pre class="fragment">
+						<code class="hljs" data-trim contenteditable>
+$("#hello-world").text("HELLO JQUERY!")
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>Plugin: JQUERY</h2>
+					<p>
+						Aufgabe: Observer
+					</p>
+					<pre>
+						<code class="hljs" data-trim contenteditable>
+<h1 id="hello-world">HELLO WORLD</h1>
+<button id="change-it">change it!</button>
+						</code>
+					</pre>
+					<p class="fragment">
+						Lösung
+					</p>
+					<pre class="fragment">
+						<code class="javascript" class="hljs" data-trim contenteditable>
+$("#change-it").on('click', function(){
+  $("#hello-world").text("HELLO JQUERY!")
+})
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>Ajax</h2>
+					<p>
+						<a rel="stylesheet" type="text/css" href="https://en.wikipedia.org/wiki/Ajax_(programming)">asynchronous JavaScript and XML</a>
+					</p>
+					<img width="178" height="238" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ajax-vergleich-en.svg/585px-Ajax-vergleich-en.svg.png">
+					<pre>
+						<code class="javascript" data-trim contenteditable>
+$.ajax()
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>Plugin: JQUERY</h2>
+					<p>
+						Aufgabe: Ajax
+						<br>
+						URL: <a href="https://jsonplaceholder.typicode.com/posts/1">https://jsonplaceholder.typicode.com/posts/1</a>
+					</p>
+					<pre>
+						<code class="hljs" data-trim contenteditable>
+<span id="title">...</span>
+<button id="load-it">LOAD-DATA</button>
+						</code>
+					</pre>
+					<p class="fragment">
+						Lösung
+					</p>
+					<pre class="fragment">
+						<code class="javascript" class="hljs" data-trim contenteditable>
+$("#load-it").on('click', function(){
+  var root = 'https://jsonplaceholder.typicode.com';
+  $.ajax({
+    url: root + '/posts/1',
+    method: 'GET'
+  }).then(function(data) {
+    $("#change-it #title").text(data.title)
+  });
+})
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>History</h2>
+					<p class="fragment">Warum Javascript?</p>
+					<p class="fragment">client side scripting language</p>
+					<p class="fragment">node</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
