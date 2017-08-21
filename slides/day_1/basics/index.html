@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section>
+          <h3>Basics Variablen</h3>
+          <h5>Variablen</h5>
+          <h6>Eine Variable besteht aus 3 Teilen</h6>
+
+          <pre>
+            <code data-trim data-noescape>
+              var variablen_name = 'test';
+            </code>
+          </pre>
+
+
+          <section>
+            <br><br><br>
+            <p>
+              <b>Die Deklarierung</b> <br>
+              Das Schlüsselwort 'var' zeigt dem Browser an, dass jetzt eine Variable erstellt wird.
+            </p>
+          </section>
+
+
+          <section>
+            <br><br><br>
+            <p>
+              <b>Die Benennung</b> <br>
+              Danach folgt der Variablen-Name. Diesen Namen kann man sich beliebig aussuchen.
+            </p>
+          </section>
+
+          <section>
+            <br><br><br>
+            <p>
+              <b>Die Zuweisung</b> <br>
+              Mit dem '=' Zeichen wird der Variable ein beliebiger Wert zugewiesen. Der VariablenName gilt jetzt als Platzhalter für den zugewiesen Wert
+            </p>
+          </section>
+
+          </ul>
+
+        </section>
+
+        <section>
+          <h3>Basics - Typen</h3>
+          <section>
+            <h6>In Javascript gibt es bestimmte Typen von Werten.</h6>
+            <p>Diese kann mann sich einfach mit dem Browserbefehl 'typeof' anzeigen lassen</p>
+            <pre>
+              <code data-trim data-noescape>
+                typeof 123;
+                // -> "number"
+
+                typeof 'ein String';
+                // -> "string"
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h6>Strings</h6>
+
+            <pre>
+            <code data-trim data-noescape>
+              'ein String';
+              'noch 1 String!!!';
+            </code>
+          </pre>
+          Alles zwischen einfachen Anführungszeichen gilt als String und wird als ein einzelner Wert betrachtet. Zeichen wie Buchstaben, Zahlen und Sonderzeichen können darin verwendet werden.
+          </section>
+
+          <section>
+            <h5>Typen</h5>
+            <h6>Strings</h6>
+
+            <pre>
+            <code data-trim data-noescape>
+              'ein ' + 'String' + '!';
+              // -> 'ein String!'
+            </code>
+          </pre>
+          Mehrere Strings können mit dem '+'-Zeichen zu einen einzelnen String zusammengefügt werden.
+          </section>
+
+          <section>
+            <h5>Typen</h5>
+            <h6>Numbers</h6>
+
+            <pre>
+              <code data-trim data-noescape>
+                3;
+                1.5;
+              </code>
+            </pre>
+            Dezimalzahlen werden mit einem '.' getrennt. Nicht mit einem ',' <br>
+            USA! USA! USA!
+          </section>
+
+          <section>
+            <h5>Typen</h5>
+            <h6>Numbers</h6>
+
+            <pre>
+              <code data-trim data-noescape>
+                3 + 12;
+                // -> 15
+                5 - 1.5;
+                //-> 3.5
+                3 * 3;
+                // -> 9
+                6 / 2;
+                // -> 3
+              </code>
+            </pre>
+            Mit Zahlen kann wie im Taschenrechner gerechnet werden.
+          </section>
+
+          <section>
+            <h5>Typen</h5>
+            <h6>Numbers</h6>
+
+            <pre>
+              <code data-trim data-noescape>
+                'Ein String' + 5;
+                // -> 'Ein String5'
+                5 + '5';
+                // -> '55'
+                5 * '5';
+                // -> 25
+              </code>
+            </pre>
+            Will man Strings und Zahlen addieren kommen komische Sachen raus. :-/
+          </section>
+
+        </section>
+
+        <section>
+          <h5>Basics - Funktionen</h5>
+          <section>
+            Eine Funktion besteht aus mehreren Teilen.
+          </section>
+
+          <section>
+            <h6>Mit Funktionen kann Code in Blöcke zusammengefasst werden</h6>
+
+              <pre>
+                <code data-trim data-noescape>
+                  function addieren(zahl1, zahl2) {
+                    return zahl + zahl;
+                  }
+                </code>
+              </pre>
+          </section>
+
+
+          <section>
+            <h5>Basics - Funktionen</h5>
+            <pre>
+              <code data-trim data-noescape>
+                function addieren(zahl1, zahl2) {
+                  return zahl + zahl;
+                }
+              </code>
+            </pre>
+
+            Das Schlüsselwort 'function' zeigt dem Browser an, dass jetzt eine Funktion erstellt wird.
+          </section>
+
+            <section>
+              <pre>
+                <code data-trim data-noescape>
+                  function funktionsName(parameter1, parameter2, ...) {
+                    // Code block
+                    return parameter1 + parameter2;
+                  }
+                </code>
+              </pre>
+              Der Funktions-Name kann beliebig ausgesucht werden. Es ist aber hilfreich, sie so zu benennen, dass man weiss was sie tut. Hier wäre z.B. "addieren" ein guter Funktionsname.
+            </section>
+
+
+            <section>
+              <pre>
+                <code data-trim data-noescape>
+                  function funktionsName(parameter1, parameter2, ...) {
+                    // Code block
+                    return parameter1 + parameter2;
+                  }
+                </code>
+              </pre>
+              Die Parameter sind Werte wie Zahlen oder Wörter (strings), welche in der Funktion als Variablen zur Verfügung stehen. Auch diese kann man beliebig benennen. Hier wären z.B. "zahl1" und "zahl2" gute Namen.
+            </section>
+
+            <section>
+              <pre>
+                <code data-trim data-noescape>
+                  function funktionsName(parameter1, parameter2, ...) {
+                    // Code block
+                    return parameter1 + parameter2;
+                  }
+                </code>
+              </pre>
+              Der Bereich zwischen den geschweiften Klammern ist der "Code Block". Dort kann beliebig viel Code ausgeführt werden. Z.B. Rechenoperation.
+            </section>
+
+            <section>
+              <pre>
+                <code data-trim data-noescape>
+                  function funktionsName(parameter1, parameter2, ...) {
+                    var ergebnis = parameter1 + parameter2;
+                    return ergebnis;
+                  }
+                </code>
+              </pre>
+              Das Schlüsselwort 'return' gibt an welchen Wert die Funktion zurückgeben soll. Danach wird die Funktion beendet und der Wert rechts von return zurückgegeben.
+            </section>
+
+            <section>
+              <pre>
+                <code data-trim data-noescape>
+                  function addieren(zahl1, zahl2) {
+                    console.log(zahl1);
+                    console.log(zahl2);
+                    var ergebnis = zahl1 + zahl2;
+                    return ergebnis;
+                  }
+
+                  var addierteZahl = addieren(3, 5);
+                  console.log(addierteZahl);
+                </code>
+              </pre>
+              Eine Funktion wird benutzt indem man den Namen schreibt mit einer einfachen Klammer dahinter. Die Werte, welche der Funktion als Parameter übergeben werden, gibt man Komma-separiert innerhalb der Klammer an.
+            </section>
+            </section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				loop: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
+<!-- <pre>
+						<code data-trim data-noescape>
+					    window.location = 'test';
+						</code>
+					</pre>
+ -->
