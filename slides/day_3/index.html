@@ -26,35 +26,142 @@
 			<div class="slides">
 				<section>
 					<section id="fragments">
-						<h2>PART 2</h2>
+						<h2>DAY 3</h2>
+						<p class="fragment">Recap</p>
+						<p class="fragment">Events</p>
 						<p class="fragment">Plugins</p>
 						<p class="fragment">Ajax</p>
-						<p class="fragment">History</p>
-						<p class="fragment">Recap</p>
 					</section>
+				</section>
+
+				<section>
+					<h5>Recap</h5>
+					<section>
+				    <p>Variable</p>
+	          <pre>
+	            <code data-trim data-noescape>
+	              var variablen_name = 'test';
+	            </code>
+	          </pre>
+	          => Beispiel Paket
+          </section>
+			  	<section>
+				    <p>Funktion</p>
+            <pre>
+              <code data-trim data-noescape>
+                function addieren(zahl1, zahl2) {
+                  return zahl + zahl;
+                }
+              </code>
+            </pre>
+            => Beispiel: Eismaschiene
+			  	</section>
+			  	<section>
+				    <p>Anonymous function</p>
+            <pre>
+              <code data-trim data-noescape>
+                var addieren = function(zahl1, zahl2) {
+                  return zahl + zahl;
+                }
+                addieren(1,3)
+              </code>
+            </pre>
+            => Beispiel: Paket in der Eismaschiene
+          </section>
+				</section>
+
+				<section>
+					<p>Funktion mit Callbacks</p>
+						<pre  class="fragment">
+						  <code data-trim data-noescape>
+function calculate(number, callback) {
+  return callback(number);
+}
+						  </code>
+						</pre>
+						<pre  class="fragment">
+						  <code data-trim data-noescape>
+var add = function(a){
+  return a+a;
+}
+calculate(10, add)
+						  </code>
+						  <a href="https://codepen.io/fluxsaas/pen/MvRvZx?editors=0011">codepen</a>
+						</pre>
+
+						<pre  class="fragment">
+						  <code data-trim data-noescape>
+var multiply = function(a){
+  return a+a;
+}
+calculate(10, multiply)
+						  </code>
+						  <a href="https://codepen.io/fluxsaas/pen/MvRvZx?editors=0011">codepen</a>
+						</pre>
+
 				</section>
 
 
 				<section>
-					<h2>Plugin: JQUERY</h2>
-					<p>$</p>
-					<p>
-						<a href="https://jquery.com/">https://jquery.com/</a>
-					</p>
-					<p class="fragment">
-						Installation
-					</p>
-					<pre class="fragment">
-						<code contenteditable>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code>index-jquery.html</pre>
-					</p>
+				  <h5>Events</h5>
+				  <section>
+				    <h6>Was sind Javascript Events</h6>
+				    <p>
+				      <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">https://www.w3schools.com/jsref/dom_obj_event.asp</a>
+				    </p>
+
+				    <pre class="fragment">
+				      <code data-trim data-noescape>
+				        &lt;button onclick=&quot;myFunction()&quot;&gt;Click me&lt;/button&gt;
+				      </code>
+				    </pre>
+
+				    <pre class="fragment">
+				      <code data-trim data-noescape>
+				        &lt;script&gt;
+				          var button = document.getElementById('click-button');
+				          button.onclick = console.log("HELLO!");
+				        &lt;/script&gt;
+				      </code>
+				    </pre>
+				  </section>
+				  <section>
+				    <a href="https://codepen.io/fluxsaas/pen/QMrzyq?editors=1111">Codepen</a>
+				  </section>
 				</section>
+
+				<section>
+					<h5>Plugin - JQUERY</h5>
+					<section>
+            $ <br/> <a href="https://jquery.com/">https://jquery.com/</a>
+          </section>
+
+          <section>
+            <pre class="fragment">
+Warum?
+              <code class="hljs" data-trim data-noescape>
+                &lt;script&gt;
+                  var button = document.getElementsByClassName('click-button');
+                  button.onclick = console.log("HELLO!");
+                &lt;/script&gt;
+              </code>
+            </pre>
+            <pre class="fragment">
+Darum?
+              <code class="hljs" data-trim data-noescape>
+&lt;script&gt;
+  var $button = $('.click-button');
+  $button.click(function() {
+    console.log("HELLO!");
+  });
+&lt;/script&gt;
+              </code>
+            </pre>
+
+          </section>
+
+				</section>
+
 				<section>
 					<h2>Plugin: JQUERY</h2>
 					<p>
@@ -66,13 +173,8 @@
 						</code>
 					</pre>
 					<p class="fragment">
-						Lösung
+						<a href="https://codepen.io/fluxsaas/pen/mMgMJP?editors=1011">codepen</a>
 					</p>
-					<pre class="fragment">
-						<code class="hljs" data-trim contenteditable>
-$("#hello-world").text("HELLO JQUERY!")
-						</code>
-					</pre>
 				</section>
 
 				<section>
@@ -140,18 +242,6 @@ $("#load-it").on('click', function(){
 })
 						</code>
 					</pre>
-				</section>
-
-				<section>
-					<h2>History</h2>
-					<p class="fragment">Warum Javascript?</p>
-					<p class="fragment">client side scripting language</p>
-					<p class="fragment">node</p>
-				</section>
-
-				<section>
-					<h2>Recap</h2>
-					<p class="fragment">Learn: https://www.codeschool.com/</p>
 				</section>
 
 			</div>
