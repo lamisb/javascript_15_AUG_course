@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kittens</title>
+
+</head>
+<body>
+
+<img src="" id="img1">
+<button id="btn1">Get new kitten</button>
+<script>
+
+    document.getElementById("btn1").addEventListener("click",LoadCatImage);
+
+    function LoadCatImage() {
+        var catsUrl = "http://thecatapi.com/api/images/get";
+        document.getElementById("img1").setAttribute("src",catsUrl );
+    }
+</script>
+</body>
+</html>
