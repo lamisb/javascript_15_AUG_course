@@ -13,7 +13,6 @@
         </div>
         <label>Select Background Color:</label>
         <div id="colors">
-
         </div>
         <label>Select font size:</label>
         <select id="sizes">
@@ -33,6 +32,29 @@
     </div>
 </div>
 <script>
+    var images = ["1.png", "2.png" , "3.png"];
+    for(var i=0; i < images.length; i++) {
+        document.getElementById("images").innerHTML  +=
+        "<img width='50' src='images/"+ images[i] + "'>";
+    }
+
+    var darkColors = ['REBECCAPURPLE','TEAL','MIDNIGHTBLUE'];
+    var lightColors = ['PINK','GOLD','CHARTREUSE'];
+    var colors = darkColors.concat(lightColors);
+    for(var i=0; i < colors.length; i++) {
+        document.getElementById("colors").innerHTML  +=
+            " <div class='color-box' style='background-color:"+colors[i]+ "'></div>";
+    }
+
+    var colorClasses = document.getElementsByClassName("color-box");
+    for(var i=0; i < colorClasses.length; i++) {
+        colorClasses[i].addEventListener("click", function(e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            document.getElementById("card").style.backgroundColor =  target.style.backgroundColor;
+        });
+    }
+
 
 
 </script>

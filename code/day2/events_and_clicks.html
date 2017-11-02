@@ -24,16 +24,19 @@
         console.log(statment)
     }
 
-    function clickHandler2(statment) {
-        console.log(statment)
-        button.removeEventListener("click", clickHandler2)
+    var clickHandler2 = function (statment) {
+        console.log(statment);
+        button.removeEventListener("click", buttonCall);
     }
-
 
     button.onclick = function () {
         clickHandler1("click clack1");
     };
-    button.addEventListener("click", function() { clickHandler2("click clack 2") } );
+
+    var buttonCall = function () {
+        clickHandler2("click clack 2")
+    }
+    button.addEventListener("click", buttonCall);
 </script>
 
 </body>

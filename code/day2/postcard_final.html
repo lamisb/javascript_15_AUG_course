@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="container">
+    <div id="working_space">
+        <label>Select Image:</label>
+        <div id="images">
+
+        </div>
+        <label>Select Background Color:</label>
+        <div id="colors">
+
+        </div>
+        <label>Select font size:</label>
+        <select id="sizes">
+
+        </select>
+        <label>Write your message</label>
+        <textarea id="your_text">
+
+        </textarea>
+
+    </div>
+    <div id="preview">
+        <div id="card">
+            <div id="card_image"></div>
+            <div id="card_text"></div>
+        </div>
+    </div>
+</div>
+<script>
+    var images = ["1.png", "2.png", "3.png"];
+    for (var i = 0; i < images.length; i++) {
+        document.getElementById("images").innerHTML = document.getElementById("images").innerHTML +
+            "<img class='img' width='50' src='images\\" + images[i] + "'>";
+    }
+    //http://htmlcolorcodes.com/color-names/
+    var darkColors = ['MIDNIGHTBLUE', 'ROYALBLUE', 'MAROON', 'DARKSLATEGRAY'];
+    var lightColors = ['AZURE', 'NAVAJOWHITE', 'PALETURQUOISE', 'LEMONCHIFFON'];
+    var colors = darkColors.concat(lightColors);
+
+    for (i = 0; i < colors.length; i++) {
+        var d = document.createElement('div');
+        d.className = "color-box";
+        d.style.backgroundColor = colors[i];
+        document.getElementById("colors").appendChild(d);
+    }
+
+    var fontSize = ["40px", "80px", "120px"];
+    for (i = 0; i < fontSize.length; i++) {
+        var option = document.createElement('option');
+        option.text = fontSize[i];
+        option.value = fontSize[i];
+        document.getElementById("sizes").appendChild(option);
+    }
+
+    var imageClasses = document.getElementsByClassName("img")
+    for (var i = 0; i < imageClasses.length; i++) {
+        imageClasses[i].addEventListener('click', function (e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            var item = target.cloneNode(true);
+            item.width = 300;
+
+            document.getElementById("card_image").innerHTML = item.outerHTML;
+        });
+    }
+
+    var colorClasses = document.getElementsByClassName("color-box");
+    for (var i = 0; i < colorClasses.length; i++) {
+        colorClasses[i].addEventListener('click', function (e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            document.getElementById("card").style.backgroundColor = target.style.backgroundColor;
+            console.log( target.style.backgroundColor);
+            if( darkColors.indexOf(target.style.backgroundColor.toUpperCase() ) > -1) {
+                document.getElementById("card_text").style.color = "white";
+            } else {
+                document.getElementById("card_text").style.color = "black";
+            }
+        });
+    }
+
+    document.getElementById("sizes").addEventListener("change", function (e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        console.log(target.options[target.selectedIndex].value);
+        document.getElementById("card_text").style.fontSize = target.options[target.selectedIndex].value;
+    });
+
+
+    document.getElementById("your_text").addEventListener("keyup", function (e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        document.getElementById("card_text").innerHTML = target.value;
+    });
+
+</script>
+</body>
+</html>
