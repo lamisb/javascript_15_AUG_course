@@ -1,0 +1,17 @@
+var people = [
+  {
+    "name": "Anja",
+    "last_name": "Schumann",
+    "image": "moin_world.jpg"
+  },
+  {
+    "name": "Lamis",
+    "last_name": "Beirkdar",
+    "image": "xing.jpg"
+  },
+  {
+    "name": "Sascha",
+    "last_name": "Lamparter",
+     "image": "tschibo.png"
+  }
+]

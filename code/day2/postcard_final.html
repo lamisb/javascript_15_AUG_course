@@ -76,8 +76,8 @@
             e = e || window.event;
             var target = e.target || e.srcElement;
             document.getElementById("card").style.backgroundColor = target.style.backgroundColor;
-            console.log( target.style.backgroundColor);
-            if( darkColors.indexOf(target.style.backgroundColor.toUpperCase() ) > -1) {
+            console.log(target.style.backgroundColor);
+            if (darkColors.indexOf(target.style.backgroundColor.toUpperCase()) > -1) {
                 document.getElementById("card_text").style.color = "white";
             } else {
                 document.getElementById("card_text").style.color = "black";
@@ -98,7 +98,6 @@
         var target = e.target || e.srcElement;
         document.getElementById("card_text").innerHTML = target.value;
     });
-
 </script>
 </body>
 </html>
