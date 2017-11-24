@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gingermen Objects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/ginger_man.js" type="application/javascript"></script>
+
+  </head>
+  <body>
+    <div id="tray">
+      <div id="inside_tray">
+
+      </div>
+    </div>
+    <script>
+
+        var gingerMen = [];
+        for(var i = 0 ; i<10; i++) {
+            gingerMen[i] = new GingerMan();
+            $("#inside_tray").append(gingerMen[i].getGingerMan());
+            gingerMen[i].setButton(gingerMen[i].buttons.GREEN);
+            gingerMen[i].setNeck(gingerMen[i].neck.SCARF);
+        }
+
+        for(var i = 0 ; i<10; i=i+2) {
+
+            gingerMen[i].setChocolate(true);
+            gingerMen[i].setButton(gingerMen[i].buttons.RED);
+            gingerMen[i].setHat(gingerMen[i].hats.SANTA);
+            gingerMen[i].setNeck(gingerMen[i].neck.SCARF);
+        }
+
+        for(var i = 0 ; i<10; i =i+3) {
+            gingerMen[i].setCandy(true);
+            gingerMen[i].setButton(gingerMen[i].buttons.BLUE);
+            gingerMen[i].setNeck(gingerMen[i].neck.PAPILLON);
+        }
+
+        gingerMen[7].setHat(gingerMen[7].hats.ST);
+
+    </script>
+  </body>
+</html>

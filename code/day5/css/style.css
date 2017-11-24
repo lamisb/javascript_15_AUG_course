@@ -1,0 +1,57 @@
+html {
+    background-image: url(../images/christmas.jpg);
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#tray {
+    background-image: url("../images/tray.png") ;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 791px;
+    margin: 0 auto;
+    margin-top:10px;
+
+}
+#inside_tray{
+    display: flex;
+    width:900px;
+    height:691px;
+    margin:70px;
+    margin-top:0px;
+    padding-top:50px;
+    flex-wrap: wrap;
+}
+
+#inside_tray .ginger_man {
+    background-image: url("../images/ginger/ginger.png") ;
+    width: 150px;
+    height: 240px;
+    background-repeat: no-repeat;
+    display:block;
+    position:relative;
+    margin:10px;
+
+}
+#inside_tray .ginger_man.chocolate {
+    background-image: url("../images/ginger/ginger-chocolate.png") ;
+
+}
+
+#inside_tray .ginger_man .candy{
+    background-image: url("../images/ginger/candy.png") ;
+    width: 150px;
+    height: 240px;
+    position:absolute;
+    top:0px;
+    display:block;
+}
+
+#inside_tray .ginger_man .block{
+    width: 150px;
+    height: 240px;
+    position:absolute;
+    top:0px;
+    display:block;
+}

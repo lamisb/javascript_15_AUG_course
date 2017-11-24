@@ -1,65 +1,131 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<section id="fragments">
-						<h2>DAY 5</h2>
-						<p class="fragment">Projekt: Photo Gallery</p>
-					</section>
-				</section>
-
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
         <section>
-          <h2>Projekt: Photogallery</h2>
-          <p>
-            <a target="_blank" href="https://codepen.io/fluxsaas/full/rGNxrw/">https://codepen.io/fluxsaas/full/rGNxrw/</a>
-          </p>
+            <section id="fragments">
+                <h2>DAY 5</h2>
+                <img src="https://media.giphy.com/media/l1J9M1UwisVDm5SLK/giphy.gif">
+            </section>
         </section>
 
-			</div>
-		</div>
+        <section>
+            <h2>Projekt: Photogallery</h2>
+            <p>
+                <a target="_blank" href="https://codepen.io/fluxsaas/full/rGNxrw/">https://codepen.io/fluxsaas/full/rGNxrw/</a>
+            </p>
+        </section>
+        <section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+            <section>
+                <h2>Classes</h2>
+                <img src="http://phpenthusiast.com/theme/assets/images/articles/classes_and_objects.jpg" width="400">
+                <p class="fragment">A class is a template for multiple objects</p>
+                <p class="fragment">class has methods</p>
+                <p class="fragment">class has properties</p>
+            </section>
+            <section>
+                <h2>Objects of class</h2>
+                <img src="http://phpenthusiast.com/theme/assets/images/articles/classes_and_objects.jpg" width="400">
+                <p class="fragment">Object of class has specific properties</p>
+                <p class="fragment">Object is instance of class</p>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+            </section>
+            <section>
+                <h2>Classes</h2>
+                <p class="fragment">Javascript is object oriented
+                    <classes></classes>
+                </p>
+                <p class="fragment">javascript is classless</p>
+                <p class="fragment">Functions can be used to somewhat simulate classes
+                    <classes></classes>
+                </p>
+            </section>
+        </section>
+        <section>
+               <pre>
+            <code class="javascript" data-trim contenteditable>
+            function Car (type, color) {
+                this.type = type;
+                this.color = color;
+                this.getInfo = function() {
+                return this.color + ' ' + this.type + ' apple';
+                };
+            }
+
+            </code>
+               </pre>
+            <a href="https://codepen.io/lamisb/pen/MOrzVO?editors=0012">Example</a>
+        </section>
+        <section>
+            Using Prototype
+               <pre>
+            <code class="javascript" data-trim contenteditable>
+            function Car(type, color) {
+                this.type = type;
+                this.color = color;
+            }
+            Car.prototype.getInfo = function() {
+                return this.color + " " + this.type + " car";
+
+             };
+            var car1 = new Car("audi","blue");
+            var car2 = new Car("Mercedes","pink");
+            console.log(car1.getInfo());
+
+            </code>
+               </pre>
+            <a href="https://codepen.io/lamisb/pen/bYaQMw?editors=0012">Example</a>
+        </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
 </html>
